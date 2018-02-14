@@ -34,6 +34,16 @@ sys.path.append(os.path.abspath("../../mdplay"))
 
 import mdplay, mdplay.writers.html, mdplay.writers._writehtml
 
+tag = """<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114124215-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114124215-1');
+</script>"""
+
 def gen_linkitem(document, url, title, tag="li", clas=None):
     b = document.createElement(tag)
     c = b
@@ -130,7 +140,7 @@ for item in list(glob.glob("./*.md"))+list(glob.glob("./*/*.md"))+list(glob.glob
         col2.appendChild(domn)
     blum1 = mdplay.writers._writehtml.tohtml(document, "utf-8", mode="xhtml")
     blum2 = smartypants.smartypants(blum1.decode("utf-8"), blumming_mode)
-    blum4 = mdplay.writers.html._escape(blum2, 1, "xhtml")
+    blum4 = mdplay.writers.html._escape(blum2.replace("</title>", "</title>" + tag), 1, "xhtml")
     open("../"+base_name+".html", "w", encoding="ascii", errors="xmlcharrefreplace").write(blum4)
 
 os.chdir("..")

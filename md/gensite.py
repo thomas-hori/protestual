@@ -44,50 +44,6 @@ tag = """<!-- Global site tag (gtag.js) - Google Analytics -->
   gtag('config', 'UA-114124215-1');
 </script>"""
 
-def gen_linkitem(document, url, title, tag="li", clas=None):
-    b = document.createElement(tag)
-    c = b
-    if url:
-        c = document.createElement("a")
-        c.setAttribute("href", url)
-        b.appendChild(c)
-    if clas:
-        b.setAttribute("class", clas)
-    c.appendChild(document.createTextNode(title))
-    return b
-
-def gen_link(document, url, title):
-    c = document.createElement("a")
-    c.setAttribute("href", url)
-    c.appendChild(document.createTextNode(title))
-    return c
-
-def gen_nav(document, root = ""):
-    for item in sorted(list(glob.glob("." + root + "/*.md")) + list(glob.glob("." + root + "/*.txt"))):
-        base_name = os.path.basename(os.path.splitext(item)[0])
-        if base_name.startswith("__") and base_name.endswith("__"):
-            continue # Special-use files such as __footer__.txt
-        title = open(item, "rU", encoding="utf-8").readline().split("-=-")
-        title = title[1] if len(title) > 2 else base_name
-        yield gen_linkitem(document, "/" + base_name + ".html", title)
-    for item in sorted(list(glob.glob("." + root + "/*-external"))):
-        data = open(item, "rU").read().strip()
-        url, title = data.split(" ", 1)
-        yield gen_linkitem(document, url, title, clas="externalmenulink")
-    for item in sorted(list(glob.glob("."+root+"/*"))):
-        if os.path.isdir(item):
-            nf = os.path.join(item,"__name__")
-            if os.path.exists(nf):
-                mynav = gen_linkitem(document, None, open(nf,"rU").read())
-            else:
-                mynav = gen_linkitem(document, None, os.path.basename(item.rstrip("/")))
-            mynav2 = document.createElement("ul")
-            mynav.appendChild(mynav2)
-            for i in gen_nav(document, root + "/" + item):
-                mynav2.appendChild(i)
-            yield mynav
-
-footertemplate = open("__footer__.txt", "rU", encoding="utf-8").read()
 sitename = open("__sitename__", "rU", encoding="utf-8").read()
 
 for item in list(glob.glob("./*.md"))+list(glob.glob("./*/*.md"))+list(glob.glob("./*.txt"))+list(glob.glob("./*/*.txt")):
@@ -146,7 +102,6 @@ for item in list(glob.glob("./*.md"))+list(glob.glob("./*/*.md"))+list(glob.glob
 os.chdir("..")
 try:
     subprocess.call(["git","add","*.html"])
-    subprocess.call(["git","add","*/*.html"])
     subprocess.call(["git","add","posters/*.pdf"])
     subprocess.call(["git","add","-u"])
     subprocess.call(["git","commit","-m","automated commit"])

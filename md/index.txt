@@ -38,8 +38,9 @@ mind for me are:
   please do not download, install or use the App and remove it from your device."&ensp;Sure thing.
 - Some may abide by a general policy of keeping location services turned off, which will not be
   possible if the app is to function.
-- Some may abide by a Stallmanist policy of avoiding non‐FL/OS software whatsoever.&ensp;While I do
-  not abide by this lifestyle, I am in support of peoples' rights to do so if they wish.
+- Some may abide by a Stallmanist policy of avoiding
+  non‐[FL/OS](https://en.wikipedia.org/wiki/Free_software_movement) software whatsoever.&ensp;While
+  I do not abide by this lifestyle, I am in support of peoples' rights to do so if they wish.
 
 ## Why this manifesto?
 

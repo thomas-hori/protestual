@@ -1,0 +1,26 @@
+.. ::
+    
+    ---
+
+    .. html-p::
+
+        .. html-a::
+            :href: /weblabels.html
+            :rel: jslicense
+
+            JavaScript licences
+
+    View mdplay sources: [this page](%s), [this footer](/md/__footer__.txt)
+
+    Site hosted by [GitHub Pages](https://pages.github.com/).
+
+    This site may make use of twemoji, by Twitter, Inc.&ensp;twemoji is licensed under [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/) and available from [here](https://github.com/twitter/twemoji/). 
+
+    .. ----------------
+
+    .. Not in use for now:
+
+    .. [![Flag Counter](http://s07.flagcounter.com/count2/Y5fb/bg_000000/txt_FFFFFF/border_FFFFFF/columns_5/maxflags_50/viewers_3/labels_1/pageviews_0/flags_0/percent_0/)](http://info.flagcounter.com/Y5fb)
+
+    .. The above country counter includes my Google Sites pages as well as this site.
+

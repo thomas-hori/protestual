@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
+
+/* (three slim weights 100-300), Book (400), Medium (500), Demi (600), Bold (700), Heavy (800), Black (900) */
+
+@font-face {
+    font-family: 'DejaVu Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: local('DejaVu Serif'), local('DejaVuSerif-Book'), url('http://harjit.moe/fonts/dejavuserif_regular_macroman/DejaVuSerif-webfont.woff') format('woff');
+}
+
+body {
+    font-family: "Pontano Sans", sans-serif;
+    font-size: large;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+    font-family: "PT Serif", serif;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+body {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#column-content {
+    margin-left: 0.5ex;
+    margin-right: 0.5ex;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background: #CCEEFF;
+    color: black;
+    padding: 1em 1ex;
+}
+
+@media screen and (min-width: 600px) {
+    #column-content {
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+
+#column-content li {
+    margin-bottom: 1ex;
+}
+
+a img {
+    border: 0;
+}
+
+sup {
+    font-size: x-small;
+}
+
+sup a {
+    text-decoration: none;
+}

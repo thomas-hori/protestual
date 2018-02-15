@@ -70,6 +70,11 @@ for item in list(glob.glob("./*.md"))+list(glob.glob("./*/*.md"))+list(glob.glob
     charset.setAttribute("name", "viewport")
     charset.setAttribute("content", "width=320,initial-scale=1")
     head.appendChild(charset)
+    # don't index in search engines.
+    charset = document.createElement("meta")
+    charset.setAttribute("name", "robots")
+    charset.setAttribute("content", "noindex, nofollow")
+    head.appendChild(charset)
     # <title>
     titlebar = document.createElement("title")
     head.appendChild(titlebar)

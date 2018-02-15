@@ -67,9 +67,8 @@ sup a {
 div.obsolete {
     margin-left: 0.5ex;
     margin-right: 0.5ex;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    background: #FFEECC;
+    border: 1px solid black;
+    background: #FFCCAA;
     color: black;
     padding: 1em 1ex;
     text-decoration: line-through;

@@ -9,7 +9,7 @@ So I was contacted by the person responsible for the new system, who clarified t
   non‐smartphone users, so neither usage of the app nor a smartphone is strictly mandatory.
 
 - If using smartphone based registration, the reason why location services are required is in order
-  to use the iBeacons (which despite being Bluetooth devices, are not paired peripherals).&ensp;GPS
+  to use the iBeacons (which, despite being Bluetooth devices, are not paired peripherals).&ensp;GPS
   is not used.
 
 - The biggest reason for recording attendance is to detect cases where a student stops attending

@@ -1,15 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
-@import url('https://fonts.googleapis.com/css?family=Droid+Sans+Mono');
-
-/* (three slim weights 100-300), Book (400), Medium (500), Demi (600), Bold (700), Heavy (800), Black (900) */
-
-@font-face {
-    font-family: 'DejaVu Serif';
-    font-style: normal;
-    font-weight: 400;
-    src: local('DejaVu Serif'), local('DejaVuSerif-Book'), url('http://harjit.moe/fonts/dejavuserif_regular_macroman/DejaVuSerif-webfont.woff') format('woff');
-}
 
 body {
     font-family: "Pontano Sans", sans-serif;

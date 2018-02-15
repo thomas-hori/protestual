@@ -6,7 +6,7 @@ So I was contacted by the person responsible for the new system, who clarified t
 
 - Marking off attendance online is available for 24 hours after the class from computers connected
   to the University network at my.lboro.ac.uk &mdash; this may be used even by non‐smartphone
-  users, so usage of the app or a smartphone isn't critical.
+  users, so usage of the app or a smartphone isn't strictly mandatory.
 
 - If using smartphone based registration, the reason why location services are required is in order
   to use the iBeacons (which despite being Bluetooth devices, are not paired peripherals).&ensp;GPS
